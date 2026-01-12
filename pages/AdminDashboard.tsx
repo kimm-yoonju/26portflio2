@@ -66,7 +66,7 @@ const AdminDashboard: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
             <h1 className="text-3xl font-bold">Admin Dashboard</h1>
-            <Link to="/" target="_blank" className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+            <Link to="/" className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
               포트폴리오 보기
             </Link>
         </div>
