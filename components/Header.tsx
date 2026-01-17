@@ -15,6 +15,9 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const logoText = theme.content.heroTitle;
+  const lastSpaceIndex = logoText.lastIndexOf(' ');
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-4 shadow-md' : 'py-8'}`}
@@ -24,8 +27,15 @@ const Header: React.FC = () => {
       }}
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="/#" className="text-2xl font-bold tracking-wider" style={{ color: theme.colors.text }}>
-          {theme.content.heroTitle}
+        <a href="/#" className="text-2xl tracking-wider" style={{ color: theme.colors.text }}>
+          {lastSpaceIndex === -1 ? (
+            <span className="font-bold">{logoText}</span>
+          ) : (
+            <>
+              <span className="font-bold">{logoText.substring(0, lastSpaceIndex)}</span>
+              <span className="font-normal">{logoText.substring(lastSpaceIndex)}</span>
+            </>
+          )}
         </a>
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#projects" className="text-sm font-medium hover:opacity-75 transition-opacity">Projects</a>

@@ -45,7 +45,7 @@ const initialThemeConfig: ThemeConfig = {
     body: "'Pretendard', sans-serif",
   },
   content: {
-    heroTitle: '김윤주',
+    heroTitle: 'Kim Yoonju Archive',
     heroSubtitle: '경험을 디자인하는\nUX/UI 디자이너',
     aboutTitle: 'About Me',
     aboutBio: '안녕하세요. 저는 문제 해결을 통해 가치 있는 경험을 만드는 UX/UI 디자이너 김윤주입니다. 사용자의 입장에서 깊이 공감하고, 비즈니스 목표에 부합하는 직관적이고 아름다운 디자인을 추구합니다. 복잡한 문제를 단순하게 풀어내는 것에 즐거움을 느끼며, 데이터 기반의 의사결정과 창의적인 접근을 통해 최적의 솔루션을 찾아냅니다.',
