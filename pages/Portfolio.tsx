@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
 import { useTheme } from '../hooks/useTheme';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
+import FadeInWrapper from '../components/FadeInWrapper';
 
 const Portfolio: React.FC = () => {
   const { theme } = useTheme();
@@ -35,10 +36,10 @@ const Portfolio: React.FC = () => {
           <div className="container mx-auto px-6 md:px-12">
             <h2 {...projectsTitleFade} className="text-4xl md:text-5xl font-bold mb-12 md:mb-16">{theme.content.projectsTitle}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {theme.projects.map((project, index) => (
-                <div key={project.id} {...useScrollFadeIn<HTMLDivElement>()}>
+              {theme.projects.map((project) => (
+                <FadeInWrapper key={project.id}>
                   <ProjectCard project={project} />
-                </div>
+                </FadeInWrapper>
               ))}
             </div>
           </div>
