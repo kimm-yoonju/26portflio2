@@ -33,7 +33,7 @@ const ProjectDetail: React.FC = () => {
       <Header />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="mb-12">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <button onClick={() => navigate(-1)} className="text-sm font-medium hover:opacity-75 transition-opacity mb-8">
               &larr; Back to Projects
             </button>
@@ -41,20 +41,51 @@ const ProjectDetail: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-extrabold">{project.title}</h1>
           </div>
 
-          <div className="mb-12 md:mb-16">
+          <div className="mb-12 md:mb-20">
             <img 
               src={project.imageUrl} 
               alt={project.title} 
-              className="w-full h-auto object-cover" 
+              className="w-full h-auto object-cover rounded-lg shadow-md" 
             />
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">About the Project</h2>
-            <div className="text-lg leading-relaxed opacity-90 whitespace-pre-line space-y-4">
+            <div className="text-lg leading-relaxed opacity-90 whitespace-pre-line space-y-6">
               {project.description.split('\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                paragraph && <p key={index}>{paragraph}</p>
               ))}
+            </div>
+            
+            <div className="mt-16 pt-8 border-t" style={{ borderColor: theme.colors.accent }}>
+              <h3 className="text-2xl font-bold mb-6">Project Details</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 text-sm">
+                <div>
+                  <p className="font-bold uppercase tracking-wider opacity-60">소속</p>
+                  <p className="mt-1">{project.company}</p>
+                </div>
+                <div>
+                  <p className="font-bold uppercase tracking-wider opacity-60">기간</p>
+                  <p className="mt-1">{project.period}</p>
+                </div>
+                <div>
+                  <p className="font-bold uppercase tracking-wider opacity-60">역할</p>
+                  <p className="mt-1">{project.role}</p>
+                </div>
+                <div>
+                  <p className="font-bold uppercase tracking-wider opacity-60">툴</p>
+                  <p className="mt-1">{project.tools}</p>
+                </div>
+                <div className="col-span-2">
+                  <p className="font-bold uppercase tracking-wider opacity-60">팀</p>
+                  <p className="mt-1">{project.team}</p>
+                </div>
+                {project.platform && (
+                  <div className="col-span-2">
+                    <p className="font-bold uppercase tracking-wider opacity-60">플랫폼</p>
+                    <p className="mt-1">{project.platform}</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

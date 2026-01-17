@@ -45,7 +45,13 @@ const AdminDashboard: React.FC = () => {
       category: '새 카테고리',
       title: '새 프로젝트 제목',
       description: '새 프로젝트 설명',
-      imageUrl: 'https://picsum.photos/800/600'
+      imageUrl: 'https://picsum.photos/800/600',
+      company: '회사명',
+      period: 'YYYY.MM - YYYY.MM',
+      team: '팀 구성',
+      role: '역할',
+      tools: '사용 툴',
+      platform: '플랫폼',
     };
     setTheme(prev => ({ ...prev, projects: [...prev.projects, newProject] }));
     setEditingProject(newProject);
@@ -122,7 +128,15 @@ const AdminDashboard: React.FC = () => {
                     <input type="text" name="title" value={editingProject.title} onChange={handleProjectChange} placeholder="제목" className="border p-2 rounded w-full" />
                     <input type="text" name="category" value={editingProject.category} onChange={handleProjectChange} placeholder="카테고리" className="border p-2 rounded w-full" />
                 </div>
-                <textarea name="description" value={editingProject.description} onChange={handleProjectChange} placeholder="설명" className="border p-2 rounded w-full mt-4" rows={3}></textarea>
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <input type="text" name="company" value={editingProject.company} onChange={handleProjectChange} placeholder="소속" className="border p-2 rounded w-full" />
+                    <input type="text" name="period" value={editingProject.period} onChange={handleProjectChange} placeholder="기간" className="border p-2 rounded w-full" />
+                    <input type="text" name="role" value={editingProject.role} onChange={handleProjectChange} placeholder="역할" className="border p-2 rounded w-full" />
+                    <input type="text" name="tools" value={editingProject.tools} onChange={handleProjectChange} placeholder="툴" className="border p-2 rounded w-full" />
+                </div>
+                <textarea name="team" value={editingProject.team} onChange={handleProjectChange} placeholder="팀" className="border p-2 rounded w-full mt-4" rows={2}></textarea>
+                <input type="text" name="platform" value={editingProject.platform || ''} onChange={handleProjectChange} placeholder="플랫폼" className="border p-2 rounded w-full mt-4" />
+                <textarea name="description" value={editingProject.description} onChange={handleProjectChange} placeholder="설명" className="border p-2 rounded w-full mt-4" rows={5}></textarea>
                 <input type="text" name="imageUrl" value={editingProject.imageUrl} onChange={handleProjectChange} placeholder="이미지 URL" className="border p-2 rounded w-full mt-4" />
                 <div className="mt-4 flex gap-2">
                     <button onClick={handleSaveProject} className="bg-blue-500 text-white px-4 py-2 rounded">저장</button>

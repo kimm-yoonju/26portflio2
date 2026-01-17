@@ -5,6 +5,12 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
+  company: string;
+  period: string;
+  team: string;
+  role: string;
+  tools: string;
+  platform?: string;
 }
 
 export interface Skill {
@@ -35,6 +41,7 @@ export interface SiteContent {
   contactTitle: string;
   contactSubtitle: string;
   contactEmail: string;
+  contactPhone: string;
   footerText: string;
 }
 
