@@ -38,7 +38,7 @@ const ProjectDetail: React.FC = () => {
               &larr; Back to Projects
             </button>
             <p className="text-sm uppercase tracking-widest opacity-80 mb-2">{project.category}</p>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter">{project.title}</h1>
+            <h1 className="text-5xl md:text-7xl font-extrabold">{project.title}</h1>
           </div>
 
           <div className="mb-12 md:mb-16">

@@ -25,7 +25,7 @@ const Portfolio: React.FC = () => {
         {/* Hero Section */}
         <section className="min-h-screen flex items-center container mx-auto px-6 md:px-12">
           <div {...heroFade}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter whitespace-pre-line" style={{ color: theme.colors.text }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold whitespace-pre-line" style={{ color: theme.colors.text }}>
               {theme.content.heroSubtitle}
             </h1>
           </div>
