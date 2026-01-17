@@ -26,7 +26,7 @@ const initialProjects: Project[] = [
     description: `정기권 중심의 기존 시스템으로는 다각도의 옵션이 필요한 신규 비즈니스 모델 '브랜드 프로그램'을 운영하기 어려워, 그간 인스타그램 DM과 구글폼을 통한 수동 예약 및 중복 예약 등의 비효율이 지속되었습니다. 이러한 문제를 근본적으로 해결하기 위해 전용 시스템과 운영 관리용 백오피스를 신규 구축했습니다. 분산되어 있던 예약 접수처를 앱으로 일원화하고 모든 관리 과정을 디지털로 전환함으로써, 운영 리소스를 월 16시간 이상 줄이고 사용자 편의성 증대를 동시에 달성했습니다.
 
 일상적인 '클래스'와 특별한 '브랜드 프로그램'의 이원화 전략을 통해 가치를 극대화하고, 관리자 승인 기반의 예약 로직을 도입하여 프리미엄 서비스로서의 가치를 전달했습니다. 이를 통해 운영 비용을 월 16시간 이상 축소하고 데이터 기반의 지속 가능한 운영 환경을 구축하며 비즈니스에 기여했습니다.`,
-    imageUrl: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: 'https://storage.googleapis.com/fpl-prd-dm/user_images/1722881268715_0.png',
     company: '파지티브호텔',
     period: '2025.03 - 2025.05',
     team: '서비스기획 1, 풀스택개발 2, UXUI 디자이너 1',
@@ -65,39 +65,4 @@ const initialThemeConfig: ThemeConfig = {
     heroTitle: 'KIM YOONJU PORTFOLIO',
     heroSubtitle: '비즈니스 성장을 견인하는\nUXUI 디자이너 김윤주입니다.',
     aboutTitle: 'About Me',
-    aboutBio: '디자인 시스템 구축부터 비즈니스 모델(BM) 설계까지 전략가로서 사용자 경험과 사업적 임팩트를 고려합니다.\n운영 자동화, 리텐션 11.4% 향상 등 실질적인 성과를 만드는 강점이 있습니다.',
-    projectsTitle: 'Projects',
-    skillsTitle: 'Skills',
-    experienceTitle: 'Experience',
-    contactTitle: 'Get In Touch',
-    contactSubtitle: '언제든지 편하게 연락주세요.',
-    contactEmail: 'kimm.yoonju@gmail.com',
-    contactPhone: '010-9120-1947',
-    footerText: '© 2024 Kim Yoonju. All Rights Reserved.',
-  },
-  projects: initialProjects,
-  skills: [],
-  experience: [],
-  socials: {
-    instagram: '#',
-    linkedin: '#',
-    behance: '#',
-  },
-};
-
-interface ThemeContextType {
-  theme: ThemeConfig;
-  setTheme: React.Dispatch<React.SetStateAction<ThemeConfig>>;
-}
-
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeConfig>(initialThemeConfig);
-  
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-};
+    aboutBio: '디자인 시스템 구축부터 비즈니스 모델(BM) 설계까지 전략가로서 사용자 경험과 사업적 임팩트를 고려합니다.\n운영 자동화, 리텐션 
