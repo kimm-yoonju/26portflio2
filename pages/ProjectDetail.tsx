@@ -29,7 +29,7 @@ const ProjectDetail: React.FC = () => {
   }
 
   return (
-    <div style={{ backgroundColor: theme.colors.background, color: theme.colors.text, fontFamily: theme.fonts.body }}>
+    <div style={{ backgroundColor: theme.colors.background, color: theme.colors.text }}>
       <Header />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-6 md:px-12">

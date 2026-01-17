@@ -53,9 +53,6 @@ export interface ThemeConfig {
     text: string;
     accent: string;
   };
-  fonts: {
-    body: string;
-  };
   content: SiteContent;
   projects: Project[];
   skills: Skill[];

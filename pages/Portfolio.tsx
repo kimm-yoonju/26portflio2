@@ -16,7 +16,7 @@ const Portfolio: React.FC = () => {
   const contactTitleFade = useScrollFadeIn<HTMLHeadingElement>();
 
   return (
-    <div style={{ backgroundColor: theme.colors.background, color: theme.colors.text, fontFamily: theme.fonts.body }}>
+    <div style={{ backgroundColor: theme.colors.background, color: theme.colors.text }}>
       <Header />
       <main>
         {/* Hero Section */}

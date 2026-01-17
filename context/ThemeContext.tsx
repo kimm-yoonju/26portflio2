@@ -61,9 +61,6 @@ const initialThemeConfig: ThemeConfig = {
     text: '#000000',
     accent: '#EEEEEE',
   },
-  fonts: {
-    body: "'Pretendard', sans-serif",
-  },
   content: {
     heroTitle: 'KIM YOONJU PORTFOLIO',
     heroSubtitle: '비즈니스 성장을 견인하는\nUXUI 디자이너 김윤주입니다.',
